@@ -144,5 +144,29 @@ int GetButton(int button)
 **************************************************************/
 int GetButtonDown(int button)
 {
+	int ret = FALSE;
 
+	if (button_state[button] == E_RELEASED)
+	{
+		ret = TRUE;
+	}
+	return ret;
+}
+
+/*************************************************
+* 入力制御機能：ゲーム終了用のボタン判定処理
+* 引数：無し
+* 戻り値：TRUE(押した瞬間)FALSE(押した瞬間ではない)
+***************************************************/
+int GetExitButton(void)
+{
+	int ret = FALSE;
+
+	if ((GetButtonDown(XINPUT_BUTTON_BACK) == TRUE) || (CheckHitKey(KEY_INPUT_ESCAPE) ==
+		TRUE))
+	{
+		ret = TRUE;
+	}
+	
+	return ret;
 }
