@@ -152,6 +152,35 @@ int GetButtonDown(int button)
 	}
 	return ret;
 }
+/***********************************************************
+* 入力制御機能：押されているか判定処理
+* 引数：XINPUTのボタン情報
+* XINPUT_BUTTON_DPAD_UP     (0)              // デジタル方向ボタン上
+* XINPUT_BUTTON_DPAD_DOWN   (1)              // デジタル方向ボタン下
+* XINPUT_BUTTON_DPAD_LEFT   (2)              // デジタル方向ボタン左
+* XINPUT_BUTTON_DPAD_RIGHT  (3)              // デジタル方向ボタン右
+* XINPUT_BUTTON_DPAD_START  (4)              // STARTボタン
+* XINPUT_BUTTON_DPAD_BACK   (5)              // BACKボタン
+* XINPUT_BUTTON_DPAD_LEFT_THUMB  (6)         // 左スティック押し込み
+* XINPUT_BUTTON_DPAD_RIGHT_THUMB (7)         // 右スティック押し込み
+* XINPUT_BUTTON_DPAD_LEFT_SHOULDER  (8)      // LBボタン
+* XINPUT_BUTTON_DPAD_RIGHT_SHOULDER (9)      // RBボタン
+* XINPUT_BUTTON_DPAD_A      (12)             // Aボタン
+* XINPUT_BUTTON_DPAD_B      (13)             // Bボタン
+* XINPUT_BUTTON_DPAD_X      (14)             // Xボタン
+* XINPUT_BUTTON_DPAD_Y      (15)             // Yボタン
+* 戻り値：TRUE(押されている),FALSE(押されていない)
+**************************************************************/
+int GetButtonUp(int button)
+{
+	int ret = FALSE;
+
+	if (button_state[button] == E_RELEASED)
+	{
+		ret = TRUE;
+	}
+	return ret;
+}
 
 /*************************************************
 * 入力制御機能：ゲーム終了用のボタン判定処理

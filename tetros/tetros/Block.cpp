@@ -167,6 +167,11 @@ int Block_initialize(void)
 	return ret;
 }
 
+int Block_Initialize(void)
+{
+	return 0;
+}
+
 /*******************************
 * ブロック機能：更新処理
 * 引数：なし
