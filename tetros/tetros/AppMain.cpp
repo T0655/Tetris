@@ -44,7 +44,7 @@ LPSTR lpCmdLine, _In_ int nShowCmd)
 	//Dxライブラリの初期化処理
 	if (DxLib_Init() == -1)
 	{
-
+		//エラー終了
 		return -1;
 
 	}
@@ -66,7 +66,7 @@ LPSTR lpCmdLine, _In_ int nShowCmd)
 
 	//ゲームループ
 	while (ProcessMessage() == 0 && GetExitButton() != TRUE && ErrorCheck() ==
-		D_NORMALITY)
+	D_NORMALITY)
 	{
 		//フレーム制御機能更新処理
 		FreamControl_Update();

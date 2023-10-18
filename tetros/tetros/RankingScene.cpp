@@ -48,26 +48,26 @@ void ranking_input_name_draw(void);                //名前入力描画処理
 * 引数：なし
 * 戻り値：エラー情報(-1:異常有,-1以外:正常終了)
 ***************************************************/
-int RankingScene_initialize(void)
+int RankingScene_Initialize(void)
 {
-	int ret = 0;
+		int ret = 0;
 
-	file_read();
+		file_read();
 
-	switch (DispMode)
-	{
-	case RANKING_INPUT_MODE:
-		Cursor.x = 0;
-		Cursor.y = 0;
-		name_num = 0;
-		break;
-	case RANKING_DISP_MODE:
-	default:
+		switch (DispMode)
+		{
+		case RANKING_INPUT_MODE:
+			Cursor.x = 0;
+			Cursor.y = 0;
+			name_num = 0;
+			break;
+		case RANKING_DISP_MODE:
+		default:
 
-		break;
-	}
+			break;
+		}
 
-	return ret;
+	return 0;
 }
 
 /******************************************

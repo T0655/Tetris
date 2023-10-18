@@ -120,7 +120,7 @@ void check_line(void);              //ブロックの横一列確認処理
 * 引数：なし
 * 戻り値：エラー情報(-1:異常,それ以外:正常)
 **********************************************/
-int Block_initialize(void)
+int Block_Initialize(void)
 {
 	int ret = 0;     //戻り値
 	int i = 0;
@@ -164,11 +164,6 @@ int Block_initialize(void)
 			break;
 		}
 	}
-	return ret;
-}
-
-int Block_Initialize(void)
-{
 	return 0;
 }
 
