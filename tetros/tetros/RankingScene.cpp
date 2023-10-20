@@ -159,8 +159,8 @@ void file_read(void)
 	{
 		for (i = 0; i < RANKING_MAX; i++)
 		{
-			fscanf_s(fp, "%2d,%[^,},%10d\n", &Ranking_Data[i].rank,
-				Ranking_Data[i].name, RANKING_NAME_LEN, &Ranking_Data[i].score);
+			fscanf_s(fp, "%2d , %[^,} , %10d\n", &Ranking_Data[i].rank,
+				&Ranking_Data[i].name, RANKING_NAME_LEN, &Ranking_Data[i].score);
 		}
 		fclose(fp);
 	}
@@ -321,14 +321,14 @@ void ranking_input_name_draw(void)
 	for (i = 0; i < 26; i++)
 	{
 		DrawFormatString((i % 13 * 50) + 300, (i / 13 * 50) + 330, GetColor(255, 255,
-			255), "%-3c", 'a' + i++);
+			255), "%-3c", 'a' + i);
 		DrawFormatString((i % 13 * 50) + 300, (i / 13 * 50) + 430, GetColor(255, 255,
-			255), "%-3c", 'A' + i++);
+			255), "%-3c", 'A' + i);
 	}
 	for (i = 0; i < 10; i++)
 	{
 		DrawFormatString((i % 13 * 50) + 300, (i / 13 * 50) + 530, GetColor(255, 255,
-			255), "%-3c", '0' + i++);
+			255), "%-3c", '0' + i);
 	}
 
 	DrawFormatString(300, 200, GetColor(255, 255, 255), ">%s", New_Score.name);
@@ -337,6 +337,6 @@ void ranking_input_name_draw(void)
 
 	//選択している文字をフォーカスしている
 	DrawBox((Cursor.x * 50) + 290, (Cursor.y * 50) + 330,
-		(Cursor.x * 50) + 330, (Cursor.y * 50) + .70,
+		(Cursor.x * 50) + 330, (Cursor.y * 50) + .370,
 		GetColor(255, 255, 255), FALSE);
 }
