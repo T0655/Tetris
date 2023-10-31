@@ -1,13 +1,33 @@
-﻿  RankingScene.cpp
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 中間ディレクトリ (x64\Debug\) に別のプロジェクト (tetros.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
+  AppMain.cpp
+C:\PG\Tetris\tetros\tetros\SceneManager.h(1,1): warning C4828: オフセット 0x2a1 から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
+C:\PG\Tetris\tetros\tetros\InputControl.h(1,1): warning C4828: オフセット 0x26b から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
+  Block.cpp
+C:\PG\Tetris\tetros\tetros\Block.h(1,1): warning C4828: オフセット 0x1d5 から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
+C:\PG\Tetris\tetros\tetros\InputControl.h(1,1): warning C4828: オフセット 0x26b から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
+  EndScene.cpp
+  FreamControl.cpp
+  GameMainScene.cpp
+C:\PG\Tetris\tetros\tetros\Block.h(1,1): warning C4828: オフセット 0x1d5 から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
+C:\PG\Tetris\tetros\tetros\SceneManager.h(1,1): warning C4828: オフセット 0x2a1 から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
+  InputControl.cpp
+C:\PG\Tetris\tetros\tetros\InputControl.h(1,1): warning C4828: オフセット 0x26b から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
+  RankingScene.cpp
 C:\PG\Tetris\tetros\tetros\InputControl.h(1,1): warning C4828: オフセット 0x26b から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
 C:\PG\Tetris\tetros\tetros\SceneManager.h(1,1): warning C4828: オフセット 0x2a1 から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
-C:\PG\Tetris\tetros\tetros\RankingScene.cpp(162,17): warning C4778: 'fscanf_s' : 書式文字列 '%[^,} , %10d\n' がありません
-C:\PG\Tetris\tetros\tetros\RankingScene.cpp(163,5): warning C4474: 'fscanf_s': 書式文字列に渡された引数の数が多すぎます
-C:\PG\Tetris\tetros\tetros\RankingScene.cpp(163,5): message : プレースホルダーとそのパラメーターには 1 の可変個引数が必要ですが、4 が指定されています。
+C:\PG\Tetris\tetros\tetros\RankingScene.cpp(162,17): warning C4778: 'fscanf_s' : 書式文字列 '%[^,},%10d\n' がありません
+C:\PG\Tetris\tetros\tetros\RankingScene.cpp(163,20): warning C4474: 'fscanf_s': 書式文字列に渡された引数の数が多すぎます
+C:\PG\Tetris\tetros\tetros\RankingScene.cpp(163,20): message : プレースホルダーとそのパラメーターには 1 の可変個引数が必要ですが、4 が指定されています。
 C:\PG\Tetris\tetros\tetros\RankingScene.cpp(190,16): warning C4476: 'fprintf' : 形式指定子に不明な種類フィールド文字 '[' があります
 C:\PG\Tetris\tetros\tetros\RankingScene.cpp(190,16): warning C4477: 'fprintf' : 書式文字列 '%10d' には、型 'int' の引数が必要ですが、可変個引数 2 は型 'char *' です
 C:\PG\Tetris\tetros\tetros\RankingScene.cpp(190,16): warning C4313: 'fprintf': 書式文字列内の '%d' が引数 2 ('char *' 型) と競合しています
 C:\PG\Tetris\tetros\tetros\RankingScene.cpp(191,42): warning C4474: 'fprintf': 書式文字列に渡された引数の数が多すぎます
 C:\PG\Tetris\tetros\tetros\RankingScene.cpp(191,42): message : プレースホルダーとそのパラメーターには 2 の可変個引数が必要ですが、3 が指定されています。
 C:\PG\Tetris\tetros\tetros\RankingScene.cpp(340,42): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
-  tetros.vcxproj -> C:\PG\Tetris\tetros\x64\Debug\tetros.exe
+  SceneManager.cpp
+C:\PG\Tetris\tetros\tetros\SceneManager.h(1,1): warning C4828: オフセット 0x2a1 から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
+  TitleScene.cpp
+C:\PG\Tetris\tetros\tetros\InputControl.h(1,1): warning C4828: オフセット 0x26b から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
+C:\PG\Tetris\tetros\tetros\SceneManager.h(1,1): warning C4828: オフセット 0x2a1 から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
+  コードを生成中...
+  tetros.vcxproj -> C:\PG\Tetris\tetros\x64\Debug\tetris.exe
