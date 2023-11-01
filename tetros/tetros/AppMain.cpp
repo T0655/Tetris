@@ -65,8 +65,7 @@ LPSTR lpCmdLine, _In_ int nShowCmd)
 	SetFontSize(FONT_SIZE);
 
 	//ゲームループ
-	while (ProcessMessage() == 0 && GetExitButton() != TRUE && ErrorCheck() ==
-	D_NORMALITY)
+	while (ProcessMessage() == 0 && GetExitButton() != TRUE && ErrorCheck() == D_NORMALITY)
 	{
 		//フレーム制御機能更新処理
 		FreamControl_Update();
