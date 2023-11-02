@@ -146,7 +146,7 @@ int GetButtonDown(int button)
 {
 	int ret = FALSE;
 
-	if (button_state[button] == E_RELEASED)
+	if (button_state[button] == E_CLICK)
 	{
 		ret = TRUE;
 	}

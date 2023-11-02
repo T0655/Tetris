@@ -74,7 +74,7 @@ const int C_BLOCK_TABLE[BLOCK_TYPE_MAX][BLOCK_TROUT_SIZE][BLOCK_TROUT_SIZE] = {
     },
 	{
 		{0,0,0,0},
-		{6,6,6,0},
+		{0,6,6,0},
 		{6,6,0,0},
 		{0,0,0,0}
     },
@@ -164,7 +164,7 @@ int Block_Initialize(void)
 			break;
 		}
 	}
-	return 0;
+	return ret;
 }
 
 /*******************************
@@ -261,7 +261,7 @@ void Block_Draw(void)
 	//落ちてくるブロックの描画
 	for (i = 0; i < BLOCK_TROUT_SIZE; i++)
 	{
-		for(j=0;j<BLOCK_TROUT_SIZE;j++)
+		for(j = 0;j<BLOCK_TROUT_SIZE;j++)
 		{
 			DrawGraph((DropBlock_X + j) * BLOCK_SIZE, (DropBlock_Y + i) * BLOCK_SIZE,
 				BlockImage[DropBlock[i][j]], TRUE);
@@ -299,13 +299,13 @@ void create_field(void)
 	int i, j;            //ループカウンタ
 
     //フィールドの生成
-	for (i = 0; i < FIELD_WIDTH; i++)
+	for (i = 0; i < FIELD_HEIGHT; i++)
 	{
 		for (j = 0; j < FIELD_WIDTH; j++)
 		{
 
 			//フィールド値の設定
-			if (j == 0 || j == FIELD_WIDTH - i || i == FIELD_HEIGHT - i)
+			if (j == 0 || j == FIELD_WIDTH - 1 || i == FIELD_HEIGHT - 1)
 			{
 				Field[i][j] = E_BLOCK_WALL;          //壁状態にする
 			}
@@ -387,7 +387,7 @@ void move_block(void)
 	//下入力時(ソフトドロップ処理)
 	if (GetButtonDown(XINPUT_BUTTON_DPAD_DOWN))
 	{
-		while (check_overlap(DropBlock_X, DropBlock_Y + 1) == TRUE)
+		if (check_overlap(DropBlock_X, DropBlock_Y + 1) == TRUE)
 		{
 			DropBlock_Y++;
 		}
@@ -475,7 +475,7 @@ void turn_block(int clockwise)
 		{
 			for (j = 0; j < BLOCK_TROUT_SIZE; j++)
 			{
-				temp[i][j] = DropBlock[i][j];
+				DropBlock[i][j] = temp[i][j];
 			}
 		}
 

@@ -67,7 +67,7 @@ int RankingScene_Initialize(void)
 			break;
 		}
 
-	return 0;
+	return ret;
 }
 
 /******************************************
@@ -109,8 +109,7 @@ void RankingScene_Draw(void)
 	    default:
 			for (i = 0; i < RANKING_MAX; i++)
 			{
-				DrawFormatString(20, 10 + (i * 25), GetColor(255, 255, 255), "%2d,%10s,%10d",
-					Ranking_Data[i].rank, Ranking_Data[i].name, Ranking_Data[i].score);
+				DrawFormatString(20, 10 + (i * 25), GetColor(255, 255, 255), "%2d,%10s,%10d", Ranking_Data[i].rank, Ranking_Data[i].name, Ranking_Data[i].score);
 	        }
 			break;
 	}
@@ -159,8 +158,7 @@ void file_read(void)
 	{
 		for (i = 0; i < RANKING_MAX; i++)
 		{
-			fscanf_s(fp, "%2d , %[^,},%10d\n", &Ranking_Data[i].rank,
-				Ranking_Data[i].name, RANKING_NAME_LEN, &Ranking_Data[i].score);
+			fscanf_s(fp, "%2d, %[^,] ,%10d\n", &Ranking_Data[i].rank, Ranking_Data[i].name, RANKING_NAME_LEN, &Ranking_Data[i].score);
 		}
 		fclose(fp);
 	}
@@ -187,8 +185,7 @@ void file_write(void)
 	{
 		for (i = 0; i < RANKING_MAX; i++)
 		{
-			fprintf(fp, "%2d,%[^,],%10d\n", Ranking_Data[i].rank,
-				Ranking_Data[i].name, Ranking_Data[i].score);
+			fprintf(fp, "%2d,%[^,],%10d\n", Ranking_Data[i].rank, Ranking_Data[i].name, Ranking_Data[i].score);
 		}
 
 		fclose(fp);
@@ -258,7 +255,7 @@ void ranking_input_name(void)
 	}
 	if (GetButtonDown(XINPUT_BUTTON_DPAD_UP) == TRUE)
 	{
-		if (Cursor.y < 0)
+		if (Cursor.y > 0)
 		{
 			Cursor.y--;
 		}
@@ -331,7 +328,7 @@ void ranking_input_name_draw(void)
 			255), "%-3c", '0' + i);
 	}
 
-	DrawFormatString(300, 200, GetColor(255, 255, 255), ">%s", New_Score.name);
+	DrawFormatString(300, 220, GetColor(255, 255, 255), ">%s", New_Score.name);
  
 	SetFontSize(20);
 
