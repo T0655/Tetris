@@ -59,15 +59,15 @@ void InputControl_Update(void)
 		{
 			switch (button_state[i])
 			{
-			  case E_NONE:
-			  case E_RELEASED:
+			 case E_NONE:
+			 case E_RELEASED:
 				button_state[i] = E_CLICK;
 				break;
-			  case E_CLICK:
-			  case E_PRESS:
+			 case E_CLICK:
+			 case E_PRESS:
 				button_state[i] = E_PRESS;
 				break;
-			  default:
+			 default:
 				button_state[i] = E_NONE;
 				break;
 			}
@@ -76,17 +76,17 @@ void InputControl_Update(void)
 		{
 			switch (button_state[i])
 			{
-			   case E_NONE:
-			   case E_RELEASED:
-				   button_state[i] = E_NONE;
-				   break;
-			   case E_CLICK:
-			   case E_PRESS:
-				   button_state[i] = E_RELEASED;
-				   break;
-			   default:
-				   button_state[i] = E_NONE;
-				   break;
+			case E_NONE:
+			case E_RELEASED:
+				button_state[i] = E_NONE;
+				break;
+			case E_CLICK:
+			case E_PRESS:
+				button_state[i] = E_RELEASED;
+				break;
+			default:
+				button_state[i] = E_NONE;
+				break;
 			}
 		}
 	}
