@@ -210,18 +210,18 @@ void Block_Update(void)
 		{
 			DropBlock_Y++;
 		}
+		else
+		{
+			//ブロックの固定
+			lock_block(DropBlock_X, DropBlock_Y);
+			//ブロックの消去とブロックを下す処理
+			check_line();
+			//新しいブロックの生成
+			create_block();
+		}
+		//カウンタの初期化
+		WaitTime = 0;
 	}
-	else
-	{
-		//ブロックの固定
-		lock_block(DropBlock_X, DropBlock_Y);
-		//ブロックの消去とブロックを下す処理
-		check_line();
-		//新しいブロックの生成
-		create_block();
-	}
-	//カウンタの初期化
-	WaitTime = 0;
 }
 
 /***************************************
