@@ -535,7 +535,7 @@ void lock_block(int x, int y)
 		{
 			if (DropBlock[i][j] != E_BLOCK_EMPTY)
 			{
-				Field[y + 1][x + j] = DropBlock[i][j];
+				Field[y + i][x + j] = DropBlock[i][j];
 			}
 		}
 	}
