@@ -22,7 +22,6 @@ int BackGround_image;         //背景画像イメージ
 int BackGround_sound;         //BGM
 int GameOver_sound;           //ゲームオーバーSE
 int Score;                    //スコア
-int Level;
 
 /**********************************
 * プロトタイプ宣言
@@ -72,10 +71,6 @@ void GameMainScene_Update(void)
 	Block_Update();
 
 	Score = Get_Line() * 50;
-	Level = 1;
-	if (Score==1000) {
-		Level += 1;
-	}
 
 	//生成できなくなったら
 	if (Get_GenerateFlg() != TRUE)
@@ -102,8 +97,6 @@ void GameMainScene_Draw(void)
 	DrawFormatString(800, 100, GetColor(255, 255, 255), "%d", Score);
 	SetFontSize(20);
 
-	DrawFormatString(800, 300, GetColor(255, 255, 255), "%d", Level);
-	SetFontSize(100);
 }
 
 /************************************************
