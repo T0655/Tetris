@@ -1,10 +1,5 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 中間ディレクトリ (x64\Debug\) に別のプロジェクト (tetros.vcxproj) と共有されているファイルが含まれています。これにより、クリーンしてリビルド動作が適切に行われない可能性があります。
-  GameMainScene.cpp
-C:\PG\Tetris\tetros\tetros\Block.h(1,1): warning C4828: オフセット 0x1d5 から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
-C:\PG\Tetris\tetros\tetros\SceneManager.h(1,1): warning C4828: オフセット 0x2a1 から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
   RankingScene.cpp
 C:\PG\Tetris\tetros\tetros\InputControl.h(1,1): warning C4828: オフセット 0x26b から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
 C:\PG\Tetris\tetros\tetros\SceneManager.h(1,1): warning C4828: オフセット 0x2a1 から始まる、現在のソースの文字セット (コードページ 932) では使用できない文字がファイルに含まれています。
-C:\PG\Tetris\tetros\tetros\RankingScene.cpp(337,42): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
-  コードを生成中...
   tetros.vcxproj -> C:\PG\Tetris\tetros\x64\Debug\tetris.exe

@@ -333,7 +333,5 @@ void ranking_input_name_draw(void)
 	SetFontSize(20);
 
 	//選択している文字をフォーカスしている
-	DrawBox((Cursor.x * 50) + 290, (Cursor.y * 50) + 330,
-		(Cursor.x * 50) + 330, (Cursor.y * 50) + .370,
-		GetColor(255, 255, 255), FALSE);
+	DrawBox((Cursor.x * 50) + 290, (Cursor.y * 50) + 330,(Cursor.x * 50) + 330, (Cursor.y * 50) + 370,	GetColor(255, 255, 255), FALSE);
 }
